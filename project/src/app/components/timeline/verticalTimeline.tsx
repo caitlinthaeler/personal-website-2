@@ -117,6 +117,22 @@ export default function VerticalEventTimeline() {
                             ? item.company
                             : "N/A"}
                         </p>
+                        <div className="flex flex-wrap w-full gap-1 py-2">
+                             {item.tags.map((tag, i) => (
+                                <motion.div className="mb-4 md:mb-0" whileHover={{ scale: 1.05 }}>
+                                    <Badge
+                                        variant="secondary"
+                                        className="text-sm py-1 px-3 bg-primary/5 border-primary/20"
+                                        >
+                                        {tag}
+                                    </Badge>
+                                </motion.div>
+                            ))}
+
+                        </div>
+                       
+                        
+
                         {item.thumbnail && (
                             <div className="mx-auto">
                                 <img src={item.thumbnail} alt="" />

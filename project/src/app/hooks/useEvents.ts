@@ -54,7 +54,7 @@ export default function useEvents() {
             "conducted market research on competitor websites",
             "organized wireframes into figma prototype"
         ],
-        tags: ["figma", "react", "nextjs", "jira", "github", "tailwind"],
+        tags: ["figma", "react", "nextjs", "jira", "github", "tailwind", "github", "tailwind", "github", "tailwind"],
         thumbnail: "/pearl/pearl-landing-page.png",
         links: [
             {
