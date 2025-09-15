@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { NavLink } from "./navlink";
 import { HomeIcon, BookIcon, TrophyIcon, PeopleIcon, GiftIcon } from "@primer/octicons-react"
+import MobileMenu from "./mobileMenu";
 
 
 
 export default function Navbar() {
-    const imageUrl = "/images/caitlinpfp2024.png"
+    const imageUrl = "/ui/caitlinpfp2024.png"
     const name = "Caitlin Thaeler"
 
     return (
@@ -31,7 +32,9 @@ export default function Navbar() {
 
             </Link>
 
-            <div className="flex flex-row">
+            
+
+            <div className="hidden md:flex">
                 <NavLink className="flex flex-row items-center gap-2" href="/#">
                     <HomeIcon size={16} />
                     Dashboard
@@ -54,6 +57,8 @@ export default function Navbar() {
                 </NavLink>
 
             </div>
+
+            <MobileMenu />
         </div>
 
         
