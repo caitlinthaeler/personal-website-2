@@ -17,7 +17,7 @@ const TimelineDot = forwardRef<HTMLDivElement, TimelineDotProps>(
     });
 
     return (
-      <div className="absolute h-full left-0 md:left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute h-full left-8 md:left-1/2 transform -translate-x-1/2 z-10">
         {/* Dot */}
         <div
           ref={ref}

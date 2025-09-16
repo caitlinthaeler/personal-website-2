@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import TimelineDot from "./timelineDot";
 import { ChevronDown, Briefcase, CheckCircle } from "lucide-react";
@@ -25,13 +25,39 @@ export default function TimelineItem({
     expandedIndex,
     toggleExpand, 
 }: TimelineItemProps) {
-  // Removed the local useRef - use the dotRef prop instead
+    // detect if viewport is at least md (768px) so we can switch animation direction responsively
+    const [isMdUp, setIsMdUp] = useState(false);
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        const mq = window.matchMedia("(min-width: 768px)");
+        setIsMdUp(mq.matches);
+        const handler = (e: MediaQueryListEvent) => setIsMdUp(e.matches);
+        // addEventListener is preferred, fall back to addListener for older browsers
+        if (mq.addEventListener) mq.addEventListener("change", handler);
+        return () => {
+        if (mq.removeEventListener) mq.removeEventListener("change", handler);
+        };
+    }, []);
 
+  const isEven = index % 2 === 0;
+
+
+  // animation X: on mobile always slide from the same side (here: +50),
+  // on md+ alternate left/right per index
+  const initialX = isMdUp ? (isEven ? 50 : -50) : 50;
+
+  const cardMargin = isMdUp ?  (isEven ? "md:ml-auto" : "md:mr-auto") : "ml-8"
+  // default origin on mobile is top-left; at md+ we keep the alternating origin
+  const originClass = isMdUp ? (isEven ? "origin-top-left" : "md:origin-top-right") : "origin-top-left ml-8"
+
+  const flexDirection = isEven ? "flex-row" : "flex-row-reverse"
+
+    const dateClass = isMdUp ? (isEven ? "flex justify-end md:w-1/2 text-right mr-16 " : "flex justify-start md:w-1/2 text-left ml-16") : "flex justify-start md:w-full text-left ml-16 origin-top-right"
+
+    const dateInitialX = isMdUp ? (isEven ? -50 : 50) : 50;
   return (
     <motion.div
-      className={`mb-12 relative z-10 flex flex-col ${
-        index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-      }`}
+      className={`mb-12 relative z-10 flex flex-col md:${flexDirection}`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1}}
       viewport={{ once: false, amount: 0.2 }}
@@ -45,13 +71,24 @@ export default function TimelineItem({
         nextDotRef={nextDotRef}
       />
 
+      {item.period && (
+        
+        <motion.div className={`transform z-10 ${dateClass} ${originClass}`}
+            initial={{ opacity: 0, scale: 0.5, x: dateInitialX }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+        >
+                <p >{item.period.startDate.year}</p>
+            
+        </motion.div>
+      )}
+
       {/* Card */}
-      <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}>
+      <div className={`flex md:w-1/2 ${cardMargin}`}>
         <motion.div
-          className={`w-full ${
-            index % 2 === 0 ? "origin-top-left" : "origin-top-right"
-          }`}
-          initial={{ opacity: 0, scale: 0.5, x: index % 2 === 0 ? 50 : -50 }}
+          className={`md:w-full ${originClass}`}
+          initial={{ opacity: 0, scale: 0.5, x: initialX }}
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
           whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
           viewport={{ once: false, amount: 0.2 }}
