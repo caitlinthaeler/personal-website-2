@@ -49,13 +49,13 @@ export default function TimelineItem({
   const cardMargin = isMdUp ?  (isEven ? "md:ml-auto" : "md:mr-auto") : "ml-8"
   // default origin on mobile is top-left; at md+ we keep the alternating origin
   const originClass = isMdUp ? (isEven ? "origin-top-left" : "md:origin-top-right") : "origin-top-left ml-8"
-  const childCardMargin = isMdUp ?  (isEven ? "ml-8" : "md:mr-8") : ""
+  const childCardMargin = isMdUp ?  (isEven ? "md:ml-8" : "md:mr-8") : ""
 
   const flexDirection = isEven ? "flex-row" : "flex-row-reverse"
 
-    const dateClass = isMdUp ? (isEven ? "flex justify-end md:w-1/2 text-right mr-16 " : "flex justify-start md:w-1/2 text-left ml-8") : "flex justify-start md:w-full text-left ml-8 origin-top-right"
+    const dateClass = isMdUp ? (isEven ? "flex justify-end md:w-1/2 text-right mr-16" : "flex justify-start md:w-1/2 text-left ml-16") : "flex justify-start md:w-full text-left ml-16 origin-top-right"
 
-    const dateMargin = isEven ? "ml-8" : "mr-8"
+    const dateMargin = isEven ? "md:l-8" : "md:mr-8"
 
     const dateInitialX = isMdUp ? (isEven ? -50 : 50) : 50;
   return (
