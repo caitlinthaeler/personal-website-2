@@ -76,7 +76,7 @@ export default function TimelineItem({
 
       {item.period && (
         
-        <motion.div className={`transform z-10 ${dateClass} ${originClass}`}
+        <motion.div className={`absolute transform z-10 ${dateClass} ${originClass}`}
             initial={{ opacity: 0, scale: 0.5, x: dateInitialX }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
