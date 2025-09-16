@@ -32,8 +32,8 @@ export default function TimelineItem({
       className={`mb-12 relative z-10 flex flex-col ${
         index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
       }`}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1}}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
     >
