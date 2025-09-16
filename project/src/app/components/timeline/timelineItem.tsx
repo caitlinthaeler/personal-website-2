@@ -49,10 +49,13 @@ export default function TimelineItem({
   const cardMargin = isMdUp ?  (isEven ? "md:ml-auto" : "md:mr-auto") : "ml-8"
   // default origin on mobile is top-left; at md+ we keep the alternating origin
   const originClass = isMdUp ? (isEven ? "origin-top-left" : "md:origin-top-right") : "origin-top-left ml-8"
+  const childCardMargin = isMdUp ?  (isEven ? "ml-8" : "md:mr-8") : ""
 
   const flexDirection = isEven ? "flex-row" : "flex-row-reverse"
 
-    const dateClass = isMdUp ? (isEven ? "flex justify-end md:w-1/2 text-right mr-16 " : "flex justify-start md:w-1/2 text-left ml-16") : "flex justify-start md:w-full text-left ml-16 origin-top-right"
+    const dateClass = isMdUp ? (isEven ? "flex justify-end md:w-1/2 text-right mr-16 " : "flex justify-start md:w-1/2 text-left ml-8") : "flex justify-start md:w-full text-left ml-8 origin-top-right"
+
+    const dateMargin = isEven ? "ml-8" : "mr-8"
 
     const dateInitialX = isMdUp ? (isEven ? -50 : 50) : 50;
   return (
@@ -79,7 +82,10 @@ export default function TimelineItem({
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
         >
+            <div className={dateMargin}>
                 <p >{item.period.startDate.year}</p>
+            </div>
+                
             
         </motion.div>
       )}
@@ -87,7 +93,7 @@ export default function TimelineItem({
       {/* Card */}
       <div className={`flex md:w-1/2 ${cardMargin}`}>
         <motion.div
-          className={`md:w-full ${originClass}`}
+          className={`md:w-full ${originClass} ${childCardMargin}`}
           initial={{ opacity: 0, scale: 0.5, x: initialX }}
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
           whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
