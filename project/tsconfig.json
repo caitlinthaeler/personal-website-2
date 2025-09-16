@@ -2,9 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/app/*"
-      ]
+      "@/*": [ "./src/app/*"],
+      "@/simple-icons": ["src/app/components/ui/icons/index.ts"],
+      "@/simple-icons/*": ["src/app/components/ui/icons/*"],
+      
     },
     "target": "ES2017",
     "lib": [

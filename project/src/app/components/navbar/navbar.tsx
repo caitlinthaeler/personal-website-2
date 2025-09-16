@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NavLink } from "./navlink";
-import { HomeIcon, BookIcon, TrophyIcon, PeopleIcon, GiftIcon } from "@primer/octicons-react"
+import { HomeIcon, BookIcon, TrophyIcon, PeopleIcon, CommentIcon } from "@primer/octicons-react"
 import MobileMenu from "./mobileMenu";
-
+import { GitHubIcon } from "@/simple-icons"
 
 
 export default function Navbar() {
@@ -35,25 +35,27 @@ export default function Navbar() {
             
 
             <div className="hidden md:flex">
-                <NavLink className="flex flex-row items-center gap-2" href="/#">
+                <NavLink className="flex flex-row items-center gap-2" href="#">
                     <HomeIcon size={16} />
-                    Dashboard
+                    About
                 </NavLink>
-                <NavLink className="flex flex-row items-center gap-2" href="#">
+                <NavLink className="flex flex-row items-center gap-2" href="#projects">
                     <PeopleIcon size={16} />
-                    Study Groups
+                    Projects
                 </NavLink>
-                <NavLink className="flex flex-row items-center gap-2" href="#">
+                <NavLink className="flex flex-row items-center gap-2" href="#experience">
                     <BookIcon size={16} />
-                    Notes...
+                    Experience
                 </NavLink>
                 <NavLink className="flex flex-row items-center gap-2" href="#">
-                    <TrophyIcon size={16} />
-                    Leaderboard
+                    <CommentIcon size={16} />
+
+                    Contact Me
                 </NavLink>
                 <NavLink className="flex flex-row items-center gap-2" href="#">
-                    <GiftIcon size={16} />
-                    Rewards
+                    <GitHubIcon size={16} />
+
+                    GitHub
                 </NavLink>
 
             </div>

@@ -4,10 +4,15 @@ import VerticalEventTimeline from "@/components/timeline/verticalTimeline";
 
 export default function Home() {
     return (
-        <div className="min-h-screen">
-            <Navbar />
-            <Hero />
+        <div>
+             <div className="flex flex-col min-h-screen">
+                <Navbar />
+                <Hero />
+                
+            </div>
             <VerticalEventTimeline />
+            
         </div>
+       
     );
 }

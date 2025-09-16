@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { Card, CardContent } from "./card"
+import { Card, CardContent } from "./ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -16,7 +16,6 @@ import Link from "next/link"
 
 export default function ConveyerCarousel() {
     const { thumbnails} = useProjectThumbnails()
-    const [isPlaying, setIsPlaying] = useState(true)
 
 
   return (
@@ -38,14 +37,14 @@ export default function ConveyerCarousel() {
         })
       ]}
     >
-      <CarouselContent className="-mt-1">
+      <CarouselContent>
         {thumbnails.map((thumbnail, index) => (
-          <CarouselItem key={index} className="py-0 pt-1 mx-5 md:basis-[400px] sm:basis-[300px] basis-[200px] h-full w-full">
+          <CarouselItem key={index} className="py-0 pt-1 mx-5 md:basis-[400px] sm:basis-[300px] basis-[200px] h-full w-full hover:opacity-50">
             <div className="">
                 <Link href={thumbnail.linkUrl ? thumbnail.linkUrl : "#"}>
-                    <Card className="h-full p-0 border-none shadow-none">
+                    <Card className="h-full p-0 border-none shadow-none bg-transparent">
                     <CardContent className="flex flex-col h-full items-center justify-center p-0">
-                        <img src={thumbnail.imageUrl} alt="" className="md:h-60 sm:h-45 h-30 object-cover"/>
+                        <img src={thumbnail.imageUrl} alt="" className="md:h-60 sm:h-45 h-30 object-cover "/>
                         <span className="md:text-3xl sm:text-2xl text-xl font-semibold">{thumbnail.title}</span>
                     </CardContent>
                 </Card>
@@ -56,7 +55,7 @@ export default function ConveyerCarousel() {
         ))}
       </CarouselContent>
       <CarouselPrevious />
-      <CarouselNext />
+      {/* <CarouselNext /> */}
     </Carousel>
   )
 }

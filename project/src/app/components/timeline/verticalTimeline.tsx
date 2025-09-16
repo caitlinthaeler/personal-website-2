@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Briefcase, Calendar, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { tags } from "@/types/tag";
 import useEvents from "@/hooks/useEvents";
-
 
 
 export default function VerticalEventTimeline() {
@@ -36,14 +36,14 @@ export default function VerticalEventTimeline() {
 //   };
 
   return (
-    <div className="mx-auto px-4 py-12 max-w-5xl">
+    <div id="experience" className="mx-auto px-4 py-12 max-w-5xl">
       <motion.h1
         className="text-3xl md:text-4xl font-bold mb-2 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Project Timeline
+        Experience
       </motion.h1>
 
       <motion.p
@@ -52,7 +52,7 @@ export default function VerticalEventTimeline() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Our development journey and milestones
+        My development journey and milestones
       </motion.p>
 
       <div className="relative">
@@ -118,18 +118,26 @@ export default function VerticalEventTimeline() {
                             : "N/A"}
                         </p>
                         <div className="flex flex-wrap w-full gap-1 py-2">
-                             {item.tags.map((tag, i) => (
-                                <motion.div className="mb-4 md:mb-0" whileHover={{ scale: 1.05 }}>
+                            {item.tags?.map((tag, i) => {
+                                const TagIcon = tags[tag].icon
+                                return (
+                                <motion.div
+                                    key={i}
+                                    className="mb-4 md:mb-0"
+                                    whileHover={{ scale: 1.05 }}
+                                >
                                     <Badge
-                                        variant="secondary"
-                                        className="text-sm py-1 px-3 bg-primary/5 border-primary/20"
-                                        >
-                                        {tag}
+                                    variant="secondary"
+                                    className="flex items-center gap-2 text-sm py-1 px-3 bg-primary/5 border-primary/20"
+                                    >
+                                    <TagIcon size={64} className="shrink-0 w-16 h-16"/>
+                                    {tags[tag].label}
                                     </Badge>
                                 </motion.div>
-                            ))}
+                                )
+                            })}
+                            </div>
 
-                        </div>
                        
                         
 
@@ -169,7 +177,7 @@ export default function VerticalEventTimeline() {
                             <div className="mb-4">
                               <h4 className="text-sm font-semibold flex items-center mb-2">
                                 <Briefcase className="w-4 h-4 mr-2 text-primary" />
-                                Events
+                                Details
                               </h4>
                               <ul className="grid grid-cols-1 gap-2">
                                 {item.points.map((point, i) => (

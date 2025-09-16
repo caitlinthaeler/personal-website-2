@@ -1,12 +1,14 @@
 import Image from "next/image";
 import ResumeModal from "./resumeModal";
-import ConveyerCarousel from "./ui/conveyerCarousel";
+import ConveyerCarousel from "./conveyerCarousel";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 export default function Hero() {
     const heroImage = "/ui/caitlinpfp2024.png"
     const heroImageSize = "200px"
     return (
-    <div className="flex flex-col">
+    <div className="flex-1 flex flex-col justify-center">
         <div className="flex w-full justify-center">
             <h1>Caitlin Thaeler</h1>
         </div>
@@ -19,12 +21,6 @@ export default function Hero() {
 
              <div className={`relative overflow-hidden rounded-full`}>
                 <img src={heroImage} alt="" height={heroImageSize} width={heroImageSize} className={`object-cover`} />
-                {/* {heroImage ? (<Image 
-                    src={heroImage}
-                    alt="image"
-                    fill
-                    className="object-cover"
-                />) : null} */}
             </div>
 
             
@@ -34,7 +30,22 @@ export default function Hero() {
             <ResumeModal />
         </div>
 
-        <div className="flex w-full justify-center">
+        <div className="flex-1 flex flex-col w-full justify-end">
+            <div className="flex w-full relative">
+                <div className="absolute left-1/2 -translate-x-1/2">
+                    <p>Projects</p>
+                </div>
+                <div className="ml-auto">
+                     <Link href="#">
+                        <Button variant="link">
+                            See All {' >>'}
+                        </Button>
+                    </Link>
+                </div>
+                
+            </div>
+           
+            
             <ConveyerCarousel />
         </div>
 
