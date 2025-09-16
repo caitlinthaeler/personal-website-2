@@ -8,7 +8,7 @@ export default function Hero() {
     const heroImage = "/ui/caitlinpfp2024.png"
     const heroImageSize = "200px"
     return (
-    <div className="flex-1 flex flex-col justify-center">
+    <div className="flex-1 flex flex-col justify-center mt-10">
         <div className="flex w-full justify-center">
             <h1>Caitlin Thaeler</h1>
         </div>
@@ -30,7 +30,7 @@ export default function Hero() {
             <ResumeModal />
         </div>
 
-        <div className="flex-1 flex flex-col w-full justify-end">
+        <div id="projects" className="flex-1 flex flex-col w-full justify-end">
             <div className="flex w-full relative">
                 <div className="absolute left-1/2 -translate-x-1/2">
                     <p>Projects</p>

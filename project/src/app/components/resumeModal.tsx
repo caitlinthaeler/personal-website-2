@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
 import { Button } from "./ui/button";
 import Modal from "./ui/modal";
-import { ZoomIn, ZoomOut, Monitor, Maximize, Download } from "lucide-react";
+import { Maximize, Download } from "lucide-react";
+import {FileIcon} from '@primer/octicons-react'
 
 export default function ResumeModal() {
   const resumeFile = "/resume/caitlin-thaeler-cv-2025-7.pdf"; // can be any file inside /public/resume
@@ -21,7 +21,11 @@ export default function ResumeModal() {
   return (
     <div>
       <Modal
-        trigger={<Button>View Resume</Button>}
+        trigger={
+          <Button>
+            View Resume
+            <FileIcon size={16} />
+          </Button>}
         size="full"
         title="Resume"
         className="!max-w-[98vw] w-[98vw] gap-2"

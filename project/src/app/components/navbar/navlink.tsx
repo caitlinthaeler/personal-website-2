@@ -10,9 +10,15 @@ interface NavLinkProps {
   children: React.ReactNode;
   className?: string;
   exact?: boolean; // optional: match exact path or just startsWith
+  openInNewTab?: boolean;
 }
 
-export function NavLink({ href, children, className, exact = true }: NavLinkProps) {
+export function NavLink({ 
+    href, 
+    children, 
+    className, 
+    openInNewTab = false 
+  }: NavLinkProps) {
   const pathname = usePathname();
   const isActive = pathname === href || pathname.startsWith(`${href}/`);
 
@@ -26,7 +32,7 @@ export function NavLink({ href, children, className, exact = true }: NavLinkProp
         className // allow caller to override/extend
       )}
     >
-      <Link href={href} className="flex flex-row items-center gap-2">
+      <Link href={href} target={openInNewTab ? "_blank" : null} className="flex flex-row items-center gap-2">
         {children}
       </Link>
     </Button>

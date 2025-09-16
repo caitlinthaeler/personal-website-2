@@ -4,6 +4,7 @@ import { NavLink } from "./navlink";
 import { HomeIcon, BookIcon, TrophyIcon, PeopleIcon, CommentIcon } from "@primer/octicons-react"
 import MobileMenu from "./mobileMenu";
 import { GitHubIcon } from "@/simple-icons"
+import MenuItems from "./menuItems";
 
 
 export default function Navbar() {
@@ -32,35 +33,9 @@ export default function Navbar() {
 
             </Link>
 
+            <MenuItems className="hidden sm:flex" />
             
-
-            <div className="hidden md:flex">
-                <NavLink className="flex flex-row items-center gap-2" href="#">
-                    <HomeIcon size={16} />
-                    About
-                </NavLink>
-                <NavLink className="flex flex-row items-center gap-2" href="#projects">
-                    <PeopleIcon size={16} />
-                    Projects
-                </NavLink>
-                <NavLink className="flex flex-row items-center gap-2" href="#experience">
-                    <BookIcon size={16} />
-                    Experience
-                </NavLink>
-                <NavLink className="flex flex-row items-center gap-2" href="#">
-                    <CommentIcon size={16} />
-
-                    Contact Me
-                </NavLink>
-                <NavLink className="flex flex-row items-center gap-2" href="#">
-                    <GitHubIcon size={16} />
-
-                    GitHub
-                </NavLink>
-
-            </div>
-
-            <MobileMenu />
+            
         </div>
 
         
