@@ -55,7 +55,7 @@ export default function TimelineItem({
 
     const dateClass = isMdUp ? (isEven ? "absolute flex justify-end md:w-1/2 text-right pr-8" : "flex flex-row-reverse justify-start md:w-1/2 text-left ml-16") : "flex justify-start md:w-full text-left ml-16 origin-top-right"
 
-    const dateMargin = isEven ? "md:l-8" : "md:mr-8"
+    const dateMargin = isEven ? "md:l-8" : "" //md:mr-8
 
     const dateInitialX = isMdUp ? (isEven ? -50 : 50) : 50;
   return (
