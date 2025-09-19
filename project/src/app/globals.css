@@ -1,28 +1,31 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --font-body: "Architects Daughter", sans-serif;
+
+  --background: #332756ff;
+  --foreground: #fbffb9ff;
+  --card: #fbffb9ff;
+  --card-foreground: #332756ff;
+  --popover: #fbffb9ff;
+  --popover-foreground: #332756ff;
+  --primary: #c27ba0ff;
+  --primary-foreground: #332756ff;
+  --secondary: #fcc6dcff;
+  --secondary-foreground: #332756ff;
+  --muted: #120c2f;
+  --muted-foreground: #fcc6dcff;
+  --accent: #e2ceff;
+  --accent-foreground: #332756ff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #fcc6dcff;
+  --input: #fffcf1ff;
+  --ring: #e2ceff;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -119,5 +122,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-body) !important;
   }
 }

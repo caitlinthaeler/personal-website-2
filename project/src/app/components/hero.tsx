@@ -10,7 +10,7 @@ export default function Hero() {
     return (
     <div className="flex-1 flex flex-col justify-center mt-10">
         <div className="flex w-full justify-center">
-            <h1>Caitlin Thaeler</h1>
+            <h1 className="text-4xl md:text-6xl">Caitlin Thaeler</h1>
         </div>
 
         <div className="flex w-full justify-center h-full">
@@ -26,7 +26,7 @@ export default function Hero() {
             
         </div>
 
-        <div className="flex w-full justify-center">
+        <div className="flex w-full justify-center mt-5">
             <ResumeModal />
         </div>
 

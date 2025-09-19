@@ -107,7 +107,7 @@ export default function TimelineItem({
                 onClick={() => toggleExpand(index)}
               >
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-primary">{item.title}</h3>
+                  <h1 className="text-4xl font-bold text-primary">{item.title}</h1>
                   <p className="text-lg font-medium">{item.company || "N/A"}</p>
                   {item.tags && <TagList tags={item.tags} />}
                   {item.thumbnail && (
@@ -116,13 +116,13 @@ export default function TimelineItem({
                     </div>
                 )}
                 <div className="flex flex-row items-center justify-between mt-2"> 
-                    <div className="flex items-center text-sm text-muted-foreground"> 
+                    <div className="flex items-center text-sm text-secondary-foreground"> 
                         {item.description && item.description} 
                         </div> 
                         <motion.div 
                             animate={{ rotate: expandedIndex === index ? 180 : 0 }} 
                             transition={{ duration: 0.3 }} > 
-                            <ChevronDown className="w-5 h-5 text-muted-foreground" /> 
+                            <ChevronDown className="w-5 h-5 text-card-foreground" /> 
                         </motion.div> </div>   
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function TimelineItem({
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 pt-2 border-t border-border/50">
+                    <div className="px-6 pb-6 pt-2 border-t border-primary">
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold flex items-center mb-2">
                           <Briefcase className="w-4 h-4 mr-2 text-primary" />

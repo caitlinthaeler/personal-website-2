@@ -39,13 +39,13 @@ export default function ConveyerCarousel() {
     >
       <CarouselContent>
         {thumbnails.map((thumbnail, index) => (
-          <CarouselItem key={index} className="py-0 pt-1 mx-5 md:basis-[400px] sm:basis-[300px] basis-[200px] h-full w-full hover:opacity-50">
+          <CarouselItem key={index} className="py-0 pt-1 md:mx-2 sm:mx-1 mx-0 md:basis-[300px] sm:basis-250px] basis-[200px] h-full w-full hover:opacity-50">
             <div className="">
                 <Link href={thumbnail.linkUrl ? thumbnail.linkUrl : "#"}>
                     <Card className="h-full p-0 border-none shadow-none bg-transparent">
                     <CardContent className="flex flex-col h-full items-center justify-center p-0">
-                        <img src={thumbnail.imageUrl} alt="" className="md:h-60 sm:h-45 h-30 object-cover "/>
-                        <span className="md:text-3xl sm:text-2xl text-xl font-semibold">{thumbnail.title}</span>
+                        <img src={thumbnail.imageUrl} alt="" className="md:h-40 sm:h-35 h-25 object-cover "/>
+                        <span className="md:text-2xl sm:text-xl text-lg font-semibold text-center text-foreground">{thumbnail.title}</span>
                     </CardContent>
                 </Card>
                 </Link>
