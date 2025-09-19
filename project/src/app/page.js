@@ -1,12 +1,7 @@
 "use client"
-import Image from "next/image";
+// app/page.js
+import { redirect } from "next/navigation";
 
-import { useRouter } from "next/navigation";
-
-export default function Home() {
-  const router = useRouter();
-  
-  return (
-   router.push("/home")
-  );
+export default function Page() {
+  redirect("/home");
 }

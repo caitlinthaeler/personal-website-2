@@ -12,7 +12,8 @@ export default function useEvents() {
 
   useEffect(() => {
     setEvents([
-      {
+        {
+        type: "job",
         title: "UI Designer",
         period: {
             startDate: {year: 2025, month: 7},
@@ -41,88 +42,51 @@ export default function useEvents() {
         ]
       },
       {
-        title: "UI Designer",
+        type: "job",
+        title: "Programming Demonstrator",
         period: {
-            startDate: {year: 2025, month: 7},
+            startDate: {year: 2023, month: 10},
+            endDate: {year: 2023, month: 11},
+            duration: "1 month"
         },
-        description: "developed user experiences and implemented them using nextjs",
-        company: "Pearl Media",
-        points: [
-            "worked on user experiences",
-            "implemented react components from figma designs",
-            "conducted market research on competitor websites",
-            "organized wireframes into figma prototype"
-        ],
-        tags: ["figma", "react", "nextjs", "jira", "github", "tailwind"],
-        thumbnail: "/pearl/pearl-landing-page.png",
-        links: [
-            {
-                name: "github",
-                url: "https://github.com/Pearl-Comics/pearl-platform",
-                variant: "github"
-            },
-            {
-                name: "readpearl.com",
-                url: "readpearl.com",
-                variant: "website"
-            }
-        ]
+        description: "led weekly programming practicals answering students' questions",
+        company: "University of Aberdeen",
       },
       {
-        title: "UI Designer",
+        type: "education",
+        title: "Student",
         period: {
             startDate: {year: 2025, month: 7},
         },
-        description: "developed user experiences and implemented them using nextjs",
-        company: "Pearl Media",
         points: [
-            "worked on user experiences",
-            "implemented react components from figma designs",
-            "conducted market research on competitor websites",
-            "organized wireframes into figma prototype"
+            "Languages & Computability",
+            "Algorithms & Data Structures",
+            "Human Computer Interaction",
+            "Object Oriented Programming",
+            "Combinatorics",
+            "Software Engineering",
+            "Artificial Intelligence",
+            "Robotics",
+            "Operating Systems",
+            "Web Development",
+            "Databases & Data Management",
+            "Distributed Systems & Security",
+            "Software Programming",
+            "Modelling & Problem Solving for Computing"
         ],
-        tags: ["figma", "react", "nextjs", "jira", "github", "tailwind"],
-        thumbnail: "/pearl/pearl-landing-page.png",
-        links: [
-            {
-                name: "github",
-                url: "https://github.com/Pearl-Comics/pearl-platform",
-                variant: "github"
-            },
-            {
-                name: "readpearl.com",
-                url: "readpearl.com",
-                variant: "website"
-            }
-        ]
+        institution: "University of Aberdeen",
+        degree: "",
+        field: "computing science",
       },
       {
-        title: "UI Designer",
+        type: "project",
+        title: "Kessler Syndrome",
         period: {
-            startDate: {year: 2025, month: 7},
+            startDate: { year: 2024, month: 10}
         },
-        description: "developed user experiences and implemented them using nextjs",
-        company: "Pearl Media",
-        points: [
-            "worked on user experiences",
-            "implemented react components from figma designs",
-            "conducted market research on competitor websites",
-            "organized wireframes into figma prototype"
-        ],
-        tags: ["figma", "react", "nextjs", "jira", "github", "tailwind"],
-        thumbnail: "/pearl/pearl-landing-page.png",
-        links: [
-            {
-                name: "github",
-                url: "https://github.com/Pearl-Comics/pearl-platform",
-                variant: "github"
-            },
-            {
-                name: "readpearl.com",
-                url: "readpearl.com",
-                variant: "website"
-            }
-        ]
+        duration: "2 days",
+        tags: ["github", "csharp"],
+        points: ["created a game in unity"],
       },
     ])
   }, []) // ✅ only runs once after mount

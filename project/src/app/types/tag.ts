@@ -4,7 +4,9 @@ import {
     TailwindIcon, 
     GitHubIcon, 
     JiraIcon,
-    FigmaIcon
+    FigmaIcon,
+    UnityIcon,
+    CSharpIcon
 } from "@/components/ui/icons"
 
 
@@ -34,6 +36,14 @@ export const tags = {
     label: "Jira",
     icon: JiraIcon
   },
+  unity: {
+    label: "Unity",
+    icon: UnityIcon
+  },
+  csharp: {
+    label: "C#",
+    icon: CSharpIcon
+  }
 } as const
 
 // ✅ Derive a strict type from keys

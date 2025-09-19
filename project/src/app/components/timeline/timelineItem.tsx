@@ -144,7 +144,7 @@ export default function TimelineItem({
                           Details
                         </h4>
                         <ul className="grid grid-cols-1 gap-2">
-                          {item.points.map((point: string, i: number) => (
+                          {item.points?.map((point: string, i: number) => (
                             <motion.li
                               key={i}
                               className="flex items-start"
