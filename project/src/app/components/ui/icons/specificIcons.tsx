@@ -149,3 +149,15 @@ export const MongoDbIcon: React.FC<IconProps> = (props) => (
 export const JiraIcon: React.FC<IconProps> = (props) => (
   <SimpleIcon name="jira" {...props} />
 );
+
+export const AsepriteIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="aseprite" {...props} />
+);
+
+export const ThreeJsIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="threejs" {...props} />
+);
+
+export const LinkedinIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="linkedin" {...props} />
+);

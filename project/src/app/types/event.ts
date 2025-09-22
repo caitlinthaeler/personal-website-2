@@ -26,7 +26,10 @@ interface BaseEvent {
 export interface JobEvent extends BaseEvent {
   type: "job";
   company: string; // required for jobs
-  companyLogo?: string;
+  companyLogo?: {
+    image: string;
+    link?: string;
+  }
   points?: string[];
 }
 
@@ -41,7 +44,6 @@ export interface EducationEvent extends BaseEvent {
 
 export interface ProjectEvent extends BaseEvent {
   type: "project";
-  duration: string;
   points?: string[];
 }
 

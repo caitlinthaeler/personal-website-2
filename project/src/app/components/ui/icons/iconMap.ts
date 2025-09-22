@@ -1,3 +1,4 @@
+import { SimpleIcon } from 'simple-icons/types';
 import { 
   siGithub,  
   siGoogle, 
@@ -36,7 +37,21 @@ import {
   siVercel,
   siMongodb,
   siJira,
+  siAseprite,
+  siThreedotjs,
 } from 'simple-icons';
+
+export const siLinkedin: SimpleIcon = {
+  title: 'LinkedIn',
+  slug: 'linkedin',
+  hex: '0077B5',
+  source: 'https://www.linkedin.com',
+  svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path fill="#0077B5" d="M22.225,0H1.771C0.792,0,0,0.774,0,1.729v20.542C0,23.227,0.792,24,1.771,24h20.451C23.2,24,24,23.227,24,22.271V1.729C24,0.774,23.2,0,22.222,0z M6.337,18.452H3.555V9h2.782v9.452zM5.337,7.433c-1.144,0-2.063-0.926-2.063-2.065,0-1.138,0.92-2.063,2.063-2.063,1.14,0,2.064,0.925,2.064,2.063,0,1.139-0.925,2.065-2.064,2.065zM20.447,20.452h-3.554v-5.569c0-1.328-0.027-3.037-1.852-3.037-1.853,0-2.136,1.445-2.136,2.939v5.667h-3.414V9h3.414v1.561h0.046c0.477-0.9,1.637-1.85,3.37-1.85,3.601,0,4.267,2.37,4.267,5.455v6.286z"/>
+  </svg>`,
+  path: 'M22.225,0H1.771C0.792,0,0,0.774,0,1.729v20.542C0,23.227,0.792,24,1.771,24h20.451C23.2,24,24,23.227,24,22.271V1.729C24,0.774,23.2,0,22.222,0z M6.337,18.452H3.555V9h2.782v9.452zM5.337,7.433c-1.144,0-2.063-0.926-2.063-2.065,0-1.138,0.92-2.063,2.063-2.063,1.14,0,2.064,0.925,2.064,2.063,0,1.139-0.925,2.065-2.064,2.065zM20.447,20.452h-3.554v-5.569c0-1.328-0.027-3.037-1.852-3.037-1.853,0-2.136,1.445-2.136,2.939v5.667h-3.414V9h3.414v1.561h0.046c0.477-0.9,1.637-1.85,3.37-1.85,3.601,0,4.267,2.37,4.267,5.455v6.286z',
+};
+
 
 export const iconMap = {
   github: siGithub,
@@ -76,6 +91,11 @@ export const iconMap = {
   vercel: siVercel,
   mongodb: siMongodb,
   jira: siJira,
+  aseprite: siAseprite,
+  threejs: siThreedotjs,
+  linkedin: siLinkedin,
 } as const;
+
+
 
 export type IconName = keyof typeof iconMap;

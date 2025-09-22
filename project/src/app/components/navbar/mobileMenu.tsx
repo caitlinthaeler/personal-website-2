@@ -20,7 +20,7 @@ export default function MobileMenu({ className = "", ...props }) {
         >
           <Button
             variant="ghost"
-            className={`sm:hidden hover:bg-secondary transition-colors duration-200 !p-3 rounded-none ${className}`}
+            className={`md:hidden hover:bg-secondary transition-colors duration-200 !p-3 rounded-none ${className}`}
             {...props}
           >
             <ThreeBarsIcon className="size-5" />
@@ -32,7 +32,7 @@ export default function MobileMenu({ className = "", ...props }) {
         <AnimatePresence>
           {open && (
             <Popover.Content
-                className="bg-card rounded-lg shadow-lg w-[150px] p-[20px] z-101 md:hidden"
+                className="bg-background border-2 border-secondary rounded-lg shadow-lg w-auto p-[20px] z-101 md:hidden"
                 side="bottom"
                 align="end"
                 sideOffset={16}

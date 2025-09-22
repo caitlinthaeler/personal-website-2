@@ -6,7 +6,8 @@ import useEvents from "@/hooks/useEvents";
 import TimelineDot from "./timelineDot";
 
 export default function VerticalEventTimeline() {
-  const { events } = useEvents();
+  const { getEventsByType } = useEvents();
+  const events = getEventsByType("job");
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
   
   // Create all refs at the top level
@@ -22,12 +23,12 @@ export default function VerticalEventTimeline() {
   return (
     <div id="experience" className="mx-auto px-4 max-w-5xl mt-10">
       <motion.h1
-        className="text-3xl md:text-4xl font-bold mb-2 text-center text-accent"
+        className="text-3xl md:text-4xl font-bold mb-2 text-center text-primary"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Experience
+        All Work Experience
       </motion.h1>
 
       <motion.p

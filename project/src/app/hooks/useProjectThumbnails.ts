@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 
-interface Thumbnail {
+export interface Thumbnail {
   title: string
-  imageUrl: string
-  linkUrl?: string
+  image: string
+  link?: string
 }
 
 export default function useProjectThumbnails() {
@@ -13,23 +13,24 @@ export default function useProjectThumbnails() {
     setThumbnails([
       {
         title: "Kessler Syndrome",
-        imageUrl: "/kessler-syndrome/easy-mode.png",
+        image: "/kessler-syndrome/easy-mode.png",
+        link: "/kesslerSyndrome"
       },
       {
         title: "Rogue Cat",
-        imageUrl: "/rogue-cat/Screen Shot 2024-07-13 at 2.39.46 PM.png",
+        image: "/rogue-cat/Screen Shot 2024-07-13 at 2.39.46 PM.png",
       },
       {
         title: "Sk8 Run",
-        imageUrl: "/sk8-run/thumbnail.png",
+        image: "/sk8-run/thumbnail.png",
       },
       {
         title: "Stirred from Stone",
-        imageUrl: "/stirred-from-stone/stirred-from-stone-img-2.png",
+        image: "/stirred-from-stone/stirred-from-stone-img-2.png",
       },
       {
         title: "Subsea Data Visualiser",
-        imageUrl: "/subsea-data-visualiser/subsea-data-visualiser-img-1.png",
+        image: "/subsea-data-visualiser/subsea-data-visualiser-img-1.png",
       },
     ])
   }, []) // ✅ only runs once after mount

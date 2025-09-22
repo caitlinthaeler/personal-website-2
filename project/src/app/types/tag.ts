@@ -6,7 +6,11 @@ import {
     JiraIcon,
     FigmaIcon,
     UnityIcon,
-    CSharpIcon
+    CSharpIcon,
+    AsepriteIcon,
+    ThreeJsIcon,
+    CssIcon,
+    Html5Icon,
 } from "@/components/ui/icons"
 
 
@@ -43,6 +47,22 @@ export const tags = {
   csharp: {
     label: "C#",
     icon: CSharpIcon
+  },
+  aseprite: {
+    label: "Aseprite",
+    icon: AsepriteIcon
+  },
+  threejs: {
+    label: "Three.js",
+    icon: ThreeJsIcon
+  },
+  css: {
+    label: "CSS",
+    icon: CssIcon
+  },
+  html: {
+    label: "HTML",
+    icon: Html5Icon
   }
 } as const
 

@@ -22,8 +22,8 @@ export default function ResumeModal() {
     <div>
       <Modal
         trigger={
-          <Button>
-            View Resume
+          <Button variant="outline">
+            Resume
             <FileIcon size={16} />
           </Button>}
         size="full"
