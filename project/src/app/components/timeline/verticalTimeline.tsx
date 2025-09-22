@@ -6,8 +6,8 @@ import useEvents from "@/hooks/useEvents";
 import TimelineDot from "./timelineDot";
 
 export default function VerticalEventTimeline() {
-  const { getEventsByType } = useEvents();
-  const events = getEventsByType("job");
+  const { events, getEventsByType } = useEvents();
+  //const events = getEventsByType("job");
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
   
   // Create all refs at the top level

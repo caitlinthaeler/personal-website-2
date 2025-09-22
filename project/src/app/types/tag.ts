@@ -63,7 +63,9 @@ export const tags = {
   html: {
     label: "HTML",
     icon: Html5Icon
-  }
+  },
+  // add more tags as needed. 
+  // if icon not created already, see /components/ui/icons/iconMap & /components/ui/icons/specificIcons
 } as const
 
 // ✅ Derive a strict type from keys

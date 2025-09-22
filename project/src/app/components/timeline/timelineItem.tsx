@@ -5,7 +5,7 @@ import TimelineDot from "./timelineDot";
 import { ChevronDown, Briefcase, CheckCircle } from "lucide-react";
 import { TagList } from "../tagList";
 import { Card, CardContent } from "../ui/card";
-import {TimelineCard, TimelineCard2} from "./timelineCard";
+import { EducationTimelineCard, JobTimelineCard, ProjectTimelineCard} from "./timelineCard";
 
 interface TimelineItemProps {
   item: any;
@@ -100,11 +100,28 @@ export default function TimelineItem({
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
         >
-            <TimelineCard2 
+            {/* Conditionally render different card types based on item.type */}
+            {item.type === "job" && (
+                <JobTimelineCard
                 item={item} 
                 index={index}
                 toggleExpand={toggleExpand} 
                 expandedIndex={expandedIndex}/>
+            )}
+            {item.type === "project" && (
+                <ProjectTimelineCard
+                item={item} 
+                index={index}
+                toggleExpand={toggleExpand} 
+                expandedIndex={expandedIndex}/>
+            )}
+            {item.type === "education" && (
+                <EducationTimelineCard
+                item={item} 
+                index={index}
+                toggleExpand={toggleExpand} 
+                expandedIndex={expandedIndex}/>
+            )}
         </motion.div>
       </div>
     </motion.div>

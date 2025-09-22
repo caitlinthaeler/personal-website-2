@@ -20,7 +20,7 @@ interface BaseEvent {
   thumbnail?: string;
   tags?: Tag[];
   links?: EventLink[];
-  points?: string[]; // remove eventually
+  points?: string[];
 }
 
 export interface JobEvent extends BaseEvent {
@@ -30,7 +30,6 @@ export interface JobEvent extends BaseEvent {
     image: string;
     link?: string;
   }
-  points?: string[];
 }
 
 export interface EducationEvent extends BaseEvent {
@@ -39,23 +38,16 @@ export interface EducationEvent extends BaseEvent {
   institutionLogo?: string;
   degree: string;
   field?: string;
-  points?: string[]; // change to courses
 }
 
 export interface ProjectEvent extends BaseEvent {
   type: "project";
-  points?: string[];
+  skills?: string[];
 }
 
 export interface ExperienceEvent extends BaseEvent {
   type: "experience";
   organization?: string;
-  points?: string[];
-}
-
-export interface OpportunityEvent extends BaseEvent {
-  type: "opportunity";
-  provider?: string;
 }
 
 export type Event =
@@ -63,4 +55,3 @@ export type Event =
   | EducationEvent
   | ProjectEvent
   | ExperienceEvent
-  | OpportunityEvent;

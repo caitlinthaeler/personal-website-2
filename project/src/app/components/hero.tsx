@@ -1,13 +1,20 @@
+"use client"
 import Image from "next/image";
 import ResumeModal from "./resumeModal";
 import ConveyerCarousel from "./conveyerCarousel";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { GitHubIcon, LinkedinIcon } from "./ui/icons";
+import { useRef } from 'react';
+import VariableProximity from "./ui/variableProximity";
+
+
 
 export default function Hero() {
     const heroImage = "/ui/caitlinpfp2024.png"
     const heroImageSize = "200px"
+
+    const containerRef = useRef(null);
     return (
     <div className="flex-1 flex flex-col justify-center mt-10">
         <div className="flex w-full justify-center">
@@ -16,12 +23,32 @@ export default function Hero() {
 
        <div className="flex w-full justify-center gap-5 h-full py-10 sm:flex-row flex-col-reverse px-4 sm:px-10 overflow-hidden">
             <div className="flex flex-col justify-end">
-                <div className="flex flex-col text-primary justify-end max-w-xl w-full text-xl">
-                <p>
+                <div 
+                    className="flex flex-col text-primary justify-end max-w-xl w-full text-xl"
+                >
+                    <div
+                    ref={containerRef}  
+                    style={{position: 'relative'}}
+                    >
+                        <VariableProximity
+                        label={'Hover me! And then star React Bits on GitHub, or else...'}
+                        className={'variable-proximity-demo'}
+                        fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                        toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                        containerRef={containerRef}
+                        radius={100}
+                        falloff='linear'
+                        style={{ fontFamily: '"Roboto Flex", sans-serif', fontSize: 48 }}
+                    />
+
+                    </div>
+                     
+                {/* <p>
+                    
                     Hello there! I'm a <span className="text-secondary">4th year university student</span> and 
                     <span className="text-secondary"> full stack software developer</span> 
                     with a passion for creating  <span className="text-secondary">aesthetic, functional, and user-friendly applications.</span>
-                </p>
+                </p> */}
                 </div>
                 <div className="flex w-full justify-start mt-5 gap-2">
                 <ResumeModal />

@@ -1,14 +1,8 @@
 import { useState, useEffect } from "react"
-
-import { EventPeriod, EventLink, Event } from "@/types/event"
-import { Tag, tags } from "@/types/tag"
+import { Event } from "@/types/event"
 
 export default function useEvents() {
   const [events, setEvents] = useState<Event[]>([])
-
-  const setDuration = (startDate: Date, endDate?: Date) => {
-    return ""
-  }
 
   useEffect(() => {
     setEvents([
@@ -52,6 +46,7 @@ export default function useEvents() {
             startDate: {year: 2025, month: 8},
         },
         description: "created wireframes in figma and ",
+        thumbnail: "/aberdeen/idtWE2g2FR_1758495781249.jpeg",
         company: "Aberdeen Software Factory",
         companyLogo: {
             image: "/aberdeen/ASF_Logo_cmyk90mm_rdax_450x450.jpeg",
@@ -83,6 +78,7 @@ export default function useEvents() {
             duration: "1 month"
         },
         description: "led weekly programming practicals answering students' questions",
+        thumbnail: "/aberdeen/idtWE2g2FR_1758495781249.jpeg",
         company: "University of Aberdeen",
         companyLogo: {
             image: "/aberdeen/idtWE2g2FR_1758495781249.jpeg",
@@ -98,6 +94,7 @@ export default function useEvents() {
             duration: "3 months"
         },
         description: "...",
+        thumbnail: "/welocalize/WeLocalize-logo.png",
         company: "Welocalize",
         companyLogo: { 
             image: "/welocalize/WeLocalize-logo.png",
@@ -112,6 +109,7 @@ export default function useEvents() {
             duration: "1 month"
         },
         description: "...",
+        thumbnail: "/waitrose/idJ0kwZ0BR_1758495515590.jpeg",
         company: "Waitrose",
         companyLogo: {
             image: "/waitrose/idJ0kwZ0BR_1758495515590.jpeg",
@@ -120,8 +118,10 @@ export default function useEvents() {
       {
         type: "education",
         title: "Student",
+        description: "Pursuing a BSc in Computing Science. Currently in my 4th year.",
+        thumbnail: "/aberdeen/idtWE2g2FR_1758495781249.jpeg",
         period: {
-            startDate: {year: 2025, month: 7},
+            startDate: {year: 2022, month: 8},
         },
         points: [
             "Languages & Computability",
