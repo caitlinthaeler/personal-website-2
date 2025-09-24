@@ -18,7 +18,7 @@ export default function useProjectThumbnails() {
       },
       {
         title: "Rogue Cat",
-        image: "/rogue-cat/Screen Shot 2024-07-13 at 2.39.46 PM.png",
+        image: "/rogue-cat/rogue-cat-thumbnail.png",
       },
       {
         title: "Sk8 Run",

@@ -26,7 +26,7 @@ export default function Hero() {
                 <div 
                     className="flex flex-col text-primary justify-end max-w-xl w-full text-xl"
                 >
-                    <div
+                    {/* <div
                     ref={containerRef}  
                     style={{position: 'relative'}}
                     >
@@ -41,14 +41,14 @@ export default function Hero() {
                         style={{ fontFamily: '"Roboto Flex", sans-serif', fontSize: 48 }}
                     />
 
-                    </div>
+                    </div> */}
                      
-                {/* <p>
+                <p>
                     
                     Hello there! I'm a <span className="text-secondary">4th year university student</span> and 
                     <span className="text-secondary"> full stack software developer</span> 
                     with a passion for creating  <span className="text-secondary">aesthetic, functional, and user-friendly applications.</span>
-                </p> */}
+                </p>
                 </div>
                 <div className="flex w-full justify-start mt-5 gap-2">
                 <ResumeModal />
