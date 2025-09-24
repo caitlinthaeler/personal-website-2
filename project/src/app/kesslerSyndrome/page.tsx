@@ -26,6 +26,14 @@ export default function KesslerSyndrome() {
                    <span>Nasa Hackathon 2024 - Kessler Syndrome project details</span>
                     <ExternalLink />
                 </NavLink>
+                <NavLink
+                    href="https://github.com/caitlinthaeler/nyskooo"
+                    openInNewTab
+                    className="inline-flex items-center gap-2 break-all flex-wrap"
+                >
+                   <span>Nyskooo Team Github</span>
+                    <ExternalLink />
+                </NavLink>
             </div>
 
             <div className="mx-10 my-5 text-primary">
