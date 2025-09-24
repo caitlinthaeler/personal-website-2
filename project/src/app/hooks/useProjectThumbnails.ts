@@ -12,7 +12,7 @@ export default function useProjectThumbnails() {
   useEffect(() => {
     setThumbnails([
       {
-        title: "Kessler Syndrome",
+        title: "Kessler Syndrome (click me)",
         image: "/kessler-syndrome/easy-mode.png",
         link: "/kesslerSyndrome"
       },
