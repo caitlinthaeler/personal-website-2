@@ -8,21 +8,23 @@ export default function useEvents() {
     setEvents([
         {
         type: "job",
-        title: "UI Designer",
+        title: "UI/UX Design Volunteer",
         period: {
             startDate: {year: 2025, month: 7},
         },
-        description: "developed user experiences and implemented them using nextjs",
+        description: "developed visually appealing interactive Figma prototypes for a web comics web app and implemented them using nextjs",
         company: "Pearl Media",
         companyLogo: {
             image: "/pearl/Artboard1.svg",
             link: "https://readpearl.com"
         },
         points: [
-            "worked on user experiences",
-            "implemented react components from figma designs",
-            "conducted market research on competitor websites",
-            "organized wireframes into figma prototype"
+            "Conducted market research on competitor websites like webtoons and tapas to identify best practices and user preferences",
+            "Designed wireframes and interactive prototypes for web comics platform using Figma",
+            "Created user-friendly interfaces that enhance reader engagement and experience",
+            "Collaborated with development team to ensure design feasibility and implementation",
+            "Applied modern UI/UX principles to create visually appealing and accessible designs",
+            "Implemented react components from figma designs",
         ],
         tags: ["figma", "react", "nextjs", "jira", "github", "tailwind", "github", "tailwind", "github", "tailwind"],
         thumbnail: "/pearl/pearl-landing-page.png",
@@ -45,7 +47,7 @@ export default function useEvents() {
         period: {
             startDate: {year: 2025, month: 8},
         },
-        description: "created wireframes in figma and ",
+        description: "Outlined client requirements, created wireframes, and implemented frontend for a circular credit reward based educational web platform that connects university students with local businesses.",
         thumbnail: "/aberdeen/idtWE2g2FR_1758495781249.jpeg",
         company: "Aberdeen Software Factory",
         companyLogo: {
@@ -53,21 +55,13 @@ export default function useEvents() {
             link: "https://www.abdn.ac.uk/ncs/departments/computing-science/aberdeen-software-factory/"
         },
         points: [
-            "blah blah blah"
+            "Collaborated with client to gather and analyze requirements for educational platform development",
+            "Created wireframes using Figma to visualize page layouts",
+            "Designed and implemented user-friendly interfaces using React and Next.js",
+            "Wrote scalable and maintainable code following best practices",
+            "Participated in weekly team meetings and code reviews to ensure high-quality deliverables"
         ],
-        tags: ["figma", "react", "nextjs", "github", "tailwind", "github"],
-        links: [
-            {
-                name: "github",
-                url: "https://github.com/Pearl-Comics/pearl-platform",
-                variant: "github"
-            },
-            {
-                name: "readpearl.com",
-                url: "readpearl.com",
-                variant: "website"
-            }
-        ]
+        tags: ["figma", "react", "nextjs", "github", "tailwind", "github", "typescript"],
       },
       {
         type: "job",
@@ -83,7 +77,15 @@ export default function useEvents() {
         companyLogo: {
             image: "/aberdeen/idtWE2g2FR_1758495781249.jpeg",
             link: "https://www.abdn.ac.uk"
-        }
+        },
+        points: [
+            "Led weekly programming practicals for first-year computing science students",
+            "Assisted students with understanding programming concepts and debugging code",
+            "Provided one-on-one support to help students overcome challenges",
+            "Facilitated a positive learning environment to encourage student engagement",
+            "Developed strong communication skills explaining complex programming concepts clearly"
+        ],
+        tags: ["github", "typescript", "react"],
       },
       {
         type: "job",
@@ -93,12 +95,19 @@ export default function useEvents() {
             endDate: {year: 2023, month: 11},
             duration: "3 months"
         },
-        description: "...",
+        description: "Reviewed and graded internet search queries to help improve search engine performance by evaluating how well results matched user intent and expectations.",
         thumbnail: "/welocalize/WeLocalize-logo.png",
         company: "Welocalize",
         companyLogo: { 
             image: "/welocalize/WeLocalize-logo.png",
-        }
+        },
+        points: [
+            "Reviewed and graded internet search queries to improve search engine performance and accuracy",
+            "Evaluated search results quality by determining how well they matched user intent from keywords",
+            "Applied critical thinking skills to assess relevance and usefulness of search engine results",
+            "Conducted online research to understand user expectations and search behaviors",
+            "Contributed to one of the world's largest Search Rating Programs at award-winning localization company"
+        ]
       },
       {
         type: "job",
@@ -108,17 +117,23 @@ export default function useEvents() {
             endDate: {year: 2023, month: 11},
             duration: "1 month"
         },
-        description: "...",
+        description: "Performed nightly warehouse and store tasks, moving inventory, operating equipment, and safely handling waste.",
         thumbnail: "/waitrose/idJ0kwZ0BR_1758495515590.jpeg",
         company: "Waitrose",
         companyLogo: {
             image: "/waitrose/idJ0kwZ0BR_1758495515590.jpeg",
-        }
-      },
+        },
+        points: [
+            "Efficiently managed and organized large volumes of mixed stock inventory",
+            "Operated specialized equipment and machinery following strict safety protocols",
+            "Coordinated with team members to optimize workflow during night shift operations",
+            "Handled waste disposal processes using appropriate safety equipment and procedures",
+            "Demonstrated reliability and strong work ethic in fast-paced retail environment"
+        ],},
       {
         type: "education",
-        title: "Student",
-        description: "Pursuing a BSc in Computing Science. Currently in my 4th year.",
+        title: "BSc Computing Science Undergraduate",
+        description: "Pursuing a BSc in Computing Science with a strong focus on software development. Currently in my 4th year, predicted 1:1.",
         thumbnail: "/aberdeen/idtWE2g2FR_1758495781249.jpeg",
         period: {
             startDate: {year: 2022, month: 8},
@@ -140,14 +155,40 @@ export default function useEvents() {
             "Modelling & Problem Solving for Computing"
         ],
         institution: "University of Aberdeen",
-        degree: "",
+        degree: "BSc Computing Science",
         field: "computing science",
+      },
+      {
+        type: "education",
+        title: "A Levels",
+        description: "Completed 4 A Levels at Portsmouth High School, achieving grades AAB in Computer Science, Mathematics, and Physics, along with an A* in EPQ.",
+        thumbnail: "/phs/Portsmouth_High_School_GDST.png",
+        period: {
+            startDate: {year: 2020, month: 9},
+            endDate: {year: 2022, month: 6},
+        },
+        points: [
+            "Computer Science - A",
+            "Mathematics - A",
+            "Physics - C",
+            "EPQ - A*"
+        ],
+        institution: "Portsmouth High School",
+        degree: "A Levels",
+        field: "A Levels",
       },
       {
         type: "project",
         title: "Kessler Syndrome",
         description: "A space debris simulation game made in Unity using C#",
         thumbnail: "/kessler-syndrome/easy-mode.png",
+        points: [
+            "Developed educational space simulation for NASA hackathon within 48-hour timeframe",
+            "Created dynamic object generation system with sophisticated collision avoidance algorithms",
+            "Implemented progessive difficulty modes to provide challenge and demonstrate environmental impact of space pollution",
+            "Designed engaging gameplay mechanics that effectively communicate serious environmental message",
+            "Conducted thorough testing and debugging to ensure stable performance with complex object interactions"
+        ],
         links: [
             {
                 name: "project details",
@@ -166,7 +207,6 @@ export default function useEvents() {
             duration: "2 days",
         },
         tags: ["github", "csharp"],
-        points: ["created a game in unity"],
       },
       {
         type: "project",
@@ -179,7 +219,13 @@ export default function useEvents() {
             duration: "2 years",
         },
         tags: ["csharp", "unity", "aseprite"],
-        points: ["created a game in unity"],
+        points: [
+            "Created comprehensive 2D RPG inspired by Warriors book series using Unity and C#",
+            "Designed and animated original pixel art spritesheets using Aseprite",
+            "Programmed complex character interaction system with branching behaviors using colliders and blend trees",
+            "Implemented rewarding progression system including leveling, inventory management, and crafting",
+            "Earned A* grade in Extended Project Qualification, demonstrating exceptional independent learning and project management"
+        ],
       },
       {
         type: "project",
@@ -192,7 +238,12 @@ export default function useEvents() {
             duration: "1 week",
         },
         tags: ["csharp", "unity"],
-        points: ["created a game in unity"],
+         points: [
+            "Developed immersive 3D thriller game combining historical accuracy with folklore elements",
+            "Programmed complex player movement and interaction systems for exploration gameplay",
+            "Created atmospheric game environments based on real Aberdeen cathedral architecture",
+            "Implemented dynamic storytelling system with multiple unique events and encounters",
+        ],
         links: [
             {
                 name: "github",
@@ -212,7 +263,14 @@ export default function useEvents() {
             duration: "24 hours"
       },
         tags: ["threejs", "html", "css", "github"],
-        points: ["created a web app using three.js to visualise subsea data"],
+        points: [
+            "Runner up in RGU Hack 2024 competition for Elementz challenge",
+            "Collaborated in a 24-hour hackathon to develop innovative subsea data visualization solution",
+            "Contributed to frontend development using HTML and CSS for user interface components",
+            "Worked with team to integrate complex 3D visualization features for maritime industry application",
+            "Helped design and implement web-based platform for visualizing vessels, pipelines, and points of interest",
+            "Worked effectively in fast-paced team environment under tight deadlines"
+        ],
         links: [
             {
                 name: "github",

@@ -34,7 +34,7 @@ function JobTimelineCard({
                     <TimelineLogo 
                         link={item.companyLogo.link} 
                         image={item.companyLogo.image}
-                        size={32}
+                        size={64}
                         className="flex flex-col justify-center"
                     />
                 )}
@@ -44,8 +44,19 @@ function JobTimelineCard({
                     
                 >
                     <div className="flex-1">
+
+                        {/* title */}
                         <h1 className="text-4xl font-bold text-primary text-center">{item.title}</h1>
-                        <p className="text-lg font-medium">{item.company || "N/A"}</p>
+
+                        {/* details */}
+                         <div className="flex flex-col items-start justify-between mt-2"> 
+                            <div className="flex items-center text-center text-lg text-secondary"> 
+                                company <p className="text-accent"> : {item.company || "N/A"}</p>
+                            </div> 
+                            <div className="flex items-center text-center text-lg text-secondary"> 
+                                type <p className="text-accent"> : work</p>
+                            </div> 
+                        </div>
                         <div className="flex flex-row items-center justify-between mt-2"> 
                             <div className="flex items-center text-center text-lg text-secondary"> 
                                 {item.description && item.description} 
@@ -113,7 +124,19 @@ function ProjectTimelineCard({
                     
                 >
                     <div className="flex-1">
+
+                        {/* title */}
                         <h1 className="text-4xl font-bold text-primary text-center">{item.title}</h1>
+
+                        {/* details */}
+                         <div className="flex flex-col items-start justify-between mt-2"> 
+                            <div className="flex items-center text-center text-lg text-secondary"> 
+                                type <p className="text-accent"> : project</p>
+                            </div> 
+                            <div className="flex items-center text-center text-lg text-secondary"> 
+                                skills <p className="text-accent"> : {item.skills || "N/A"}</p>
+                            </div>
+                        </div>
                         {/* <p className="text-lg font-medium">{item.company || "N/A"}</p> */}
                         <div className="flex flex-row items-center justify-between mt-2"> 
                             <div className="flex items-center text-center text-lg text-secondary"> 
@@ -182,7 +205,16 @@ function EducationTimelineCard({
                     
                 >
                     <div className="flex-1">
+
+                        {/* title */}
                         <h1 className="text-4xl font-bold text-primary text-center">{item.title}</h1>
+
+                        {/* details */}
+                         <div className="flex flex-col items-start justify-between mt-2"> 
+                            <div className="flex items-center text-center text-lg text-secondary"> 
+                                type <p className="text-accent"> : education</p>
+                            </div> 
+                        </div>
                         {/* <p className="text-lg font-medium">{item.company || "N/A"}</p> */}
                         <div className="flex flex-row items-center justify-between mt-2"> 
                             <div className="flex items-center text-center text-lg text-secondary"> 
@@ -191,6 +223,8 @@ function EducationTimelineCard({
                         </div>
                     </div>
                 </div>
+                <ReadMoreToggle expandedIndex={expandedIndex} index={index} expandText="Show Courses" collapseText="Hide Courses"/>
+
 
                 {/* Expanded details */}
                 <AnimatedReveal expandedIndex={expandedIndex} index={index}>
@@ -222,7 +256,7 @@ function EducationTimelineCard({
 
                 </AnimatedReveal>
 
-                <ReadMoreToggle expandedIndex={expandedIndex} index={index}/>
+                {/* <ReadMoreToggle expandedIndex={expandedIndex} index={index}/> */}
 
                 </CardContent>
             </Card>

@@ -11,6 +11,7 @@ import {
     ThreeJsIcon,
     CssIcon,
     Html5Icon,
+    TypeScriptIcon,
 } from "@/components/ui/icons"
 
 
@@ -64,6 +65,11 @@ export const tags = {
     label: "HTML",
     icon: Html5Icon
   },
+  typescript: {
+    label: "TypeScript",
+    icon: TypeScriptIcon
+  },
+  // typescript is using react icon temporarily
   // add more tags as needed. 
   // if icon not created already, see /components/ui/icons/iconMap & /components/ui/icons/specificIcons
 } as const
