@@ -161,7 +161,7 @@ export default function useEvents() {
       {
         type: "education",
         title: "A Levels",
-        description: "Completed 4 A Levels at Portsmouth High School, achieving grades AAB in Computer Science, Mathematics, and Physics, along with an A* in EPQ.",
+        description: "Completed 4 A Levels at Portsmouth High School, achieving grades A*AAC in Computer Science, Mathematics, and Physics, along with an A* in EPQ.",
         thumbnail: "/phs/Portsmouth_High_School_GDST.png",
         period: {
             startDate: {year: 2020, month: 9},
