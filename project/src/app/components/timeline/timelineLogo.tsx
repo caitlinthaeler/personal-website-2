@@ -32,7 +32,8 @@ export function TimelineLogo({
             <img
             src={image}
             alt={`${image} logo`}
-            className={`h-${size} w-${size} object-contain`}
+            style={{ height: `${size}px`, width: `${size}px` }}
+            className="object-contain"
             />
             
         </a>

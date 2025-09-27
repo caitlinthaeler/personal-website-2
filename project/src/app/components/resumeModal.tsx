@@ -3,9 +3,10 @@ import { Button } from "./ui/button";
 import Modal from "./ui/modal";
 import { Maximize, Download } from "lucide-react";
 import {FileIcon} from '@primer/octicons-react'
+import { useResume } from "@/hooks/useResume";
 
 export default function ResumeModal() {
-  const resumeFile = "/resume/caitlin-thaeler-cv-2025-7.pdf"; // can be any file inside /public/resume
+  const resumeFile = useResume(); // can be any file inside /public/resume
 
   const handleFullScreen = () => {
     window.open(resumeFile, "_blank");
