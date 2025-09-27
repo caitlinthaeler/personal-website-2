@@ -1,5 +1,5 @@
 export function useResume() {
-  const value = "/resume/caitlin-thaeler-cv-2025-8.pdf";
+  const value = "/resume/caitlin-thaeler-cv-2025-9.pdf";
 
   return value;
 }
