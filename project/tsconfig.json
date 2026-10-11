@@ -9,6 +9,9 @@
       ],
       "@/simple-icons/*": [
         "./src/app/components/ui/icons/*"
+      ],
+      "lib/*": [
+        "./lib/*"
       ]
     },
     "target": "ES2017",

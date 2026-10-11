@@ -13,3 +13,12 @@ export interface IconProps {
 export interface SimpleIconProps extends IconProps {
   name: IconName;
 }
+
+export type SimpleIcon = {
+  title: string;
+  slug: string;
+  hex: string;
+  source?: string;
+  svg?: string;
+  path: string;
+};

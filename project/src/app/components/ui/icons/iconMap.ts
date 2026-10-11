@@ -1,4 +1,4 @@
-import { SimpleIcon } from 'simple-icons/types';
+import { SimpleIcon } from '@/simple-icons';
 import { 
   siGithub,  
   siGoogle, 

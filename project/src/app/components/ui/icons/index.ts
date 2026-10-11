@@ -1,9 +1,10 @@
 // Main component export
-export { SimpleIcon } from './simpleIcon';
+//export { SimpleIcon } from './simpleIcon';
 
 // Type exports
 export type { IconName } from './iconMap';
 export type { IconProps, SimpleIconProps } from './types';
+export type { SimpleIcon } from './types';
 
 // Icon map for direct access (if needed)
 export { iconMap } from './iconMap';
