@@ -6,6 +6,34 @@ export default function useEvents() {
 
   useEffect(() => {
     setEvents([
+         {
+        type: "job",
+        title: "Sodftware Engineering Intern",
+        period: {
+            startDate: {year: 2026, month: 7, day: 6},
+            endDate: {year: 2027, month: 7, day: 6},
+        },
+        company: "GE Vernova",
+        companyLogo: {
+            image: "/ge-vernova/GEV-e06a174f.png",
+            link: "https://gevernova.com"
+        },
+        points: [
+            "Deilvered features using test-driven development in a large-scale monorepo with an Agile team",
+            "Contributed to a domain agnostic Angular map component for use in web apps across the organization",
+            "Strengthened end-to-end test reliability by updating GitHub Actions CI workflows to auto-capture screenshots and videos on failing e2e tests",
+            "Developed and presented a web app for visualizing networks at a high level",
+        ],
+        tags: ["angular", "github", "tailwind", "typescript", "playwright", "jest", "confluence", "nx"],
+        thumbnail: "/ge-vernova/GEV-e06a174f.png",
+        links: [
+            {
+                name: "gevernova.com",
+                url: "https://gevernova.com",
+                variant: "website"
+            }
+        ]
+      },
         {
         type: "job",
         title: "UI/UX Design Volunteer",

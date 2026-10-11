@@ -34,10 +34,6 @@ export const DiscordIcon: React.FC<IconProps> = (props) => (
   <SimpleIcon name="discord" {...props} />
 );
 
-export const SlackIcon: React.FC<IconProps> = (props) => (
-  <SimpleIcon name="slack" {...props} />
-);
-
 export const SpotifyIcon: React.FC<IconProps> = (props) => (
   <SimpleIcon name="spotify" {...props} />
 );
@@ -160,4 +156,24 @@ export const ThreeJsIcon: React.FC<IconProps> = (props) => (
 
 export const LinkedinIcon: React.FC<IconProps> = (props) => (
   <SimpleIcon name="linkedin" {...props} />
+);
+
+export const AngularIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="angular" {...props} />
+);
+
+export const PlaywrightIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="playwright" {...props} />
+);
+
+export const JestIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="jest" {...props} />
+);
+
+export const ConfluenceIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="confluence" {...props} />
+);
+
+export const NxIcon: React.FC<IconProps> = (props) => (
+  <SimpleIcon name="nx" {...props} />
 );

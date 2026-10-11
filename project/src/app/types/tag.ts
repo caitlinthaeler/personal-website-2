@@ -12,6 +12,11 @@ import {
     CssIcon,
     Html5Icon,
     TypeScriptIcon,
+    AngularIcon,
+    PlaywrightIcon,
+    JestIcon,
+    ConfluenceIcon,
+    NxIcon
 } from "@/components/ui/icons"
 
 
@@ -68,6 +73,26 @@ export const tags = {
   typescript: {
     label: "TypeScript",
     icon: TypeScriptIcon
+  },
+  angular: {
+    label: "Angular",
+    icon: AngularIcon
+  },
+  playwright: {
+    label: "Playwright",
+    icon: PlaywrightIcon
+  },
+  jest: {
+    label: "Jest",
+    icon: JestIcon
+  },
+  confluence: {
+    label: "Confluence",
+    icon: ConfluenceIcon
+  },
+  nx: {
+    label: "Nx",
+    icon: NxIcon
   },
   // typescript is using react icon temporarily
   // add more tags as needed. 
